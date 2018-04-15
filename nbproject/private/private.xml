@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/web/adminsite.jsp</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/web/adminsitecreatenasabahproses.jsp</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/dao_impl/DaoATM.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/dao_impl/DaoTabungan.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/service/ServiceTabungan.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/web/index.jsp</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/service/ServiceATM.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/web/adminsitecreate.jsp</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/model/Nasabah.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/web/adminsitecreateatm.jsp</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/model/TransaksiOnline.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/web/adminsitecreatenasabah.jsp</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/dao_impl/DaoNasabah.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/singleton/SingletonApp.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/web/adminsitecreateatmproses.jsp</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/model/KartuATM.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/service/ServiceNasabah.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/model/TransaksiOffline.java</file>
+            <file>file:/G:/Materi%20Kuliah%20Semester%204/Pemrograman%20Lanjut/Praktikum/Sistem-Transaksi-Bank/src/java/model/SystemTransaksi.java</file>
+        </group>
+    </open-files>
+</project-private>

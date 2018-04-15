@@ -20,9 +20,11 @@ public class ServiceNasabah {
     public Nasabah login(Nasabah nasabah){
         return daoNasabah.findById(nasabah.getId());
     }
+    
     public void register(Nasabah nasabah){
         daoNasabah.save(nasabah);
     }
+    
     public void delete(Nasabah nasabah){
         daoNasabah.delete(nasabah.getId());
     }
