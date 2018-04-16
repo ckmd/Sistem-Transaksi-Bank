@@ -8,15 +8,15 @@
 <%@page import = "model.Tabungan" %>
 <!DOCTYPE html>
 <%
-    String id = request.getParameter("rekening");
+    Long id = Long.parseLong(request.getParameter("rekening"));
     String user = request.getParameter("user");
     String pass = request.getParameter("pass");
-    String saldo = request.getParameter("saldo");
+    Long saldo = Long.parseLong(request.getParameter("saldo"));
     
     SingletonApp singletonApp = new SingletonApp();
-    Tabungan tabungan = new Tabungan(Long.parseLong(id),user,Integer.parseInt(pass),Long.parseLong(saldo));
+    Tabungan tabungan = new Tabungan(id,user,Integer.parseInt(pass),saldo);
     
-    singletonApp.getServiceTabungan().update(Long.parseLong(id), tabungan, user, Integer.parseInt(pass));
+    singletonApp.getServiceTabungan().update(id, tabungan, user, Integer.parseInt(pass));
 %>
 <html>
     <head>

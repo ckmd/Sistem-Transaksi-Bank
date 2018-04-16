@@ -8,22 +8,22 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    String id = request.getParameter("rekening");
-    String tipeKartu = "GOLD";
-    
+    Long rekening = Long.parseLong(request.getParameter("rekening"));
+    String tipeKartu = "";
+    //Long rekening = (Long) session.getAttribute("rekening");
     SingletonApp singletonApp = new SingletonApp();
-    Tabungan tabungan = new Tabungan(Long.parseLong(id));
     
-    if(tabungan.getSaldo() >= 1000){
+    Long saldo = (Long) session.getAttribute("saldo");
+    if(saldo >= 1000){
         tipeKartu = "PLATINUM";        
-//    }
-//    else if(tabungan.getSaldo() >= 300){
-//        tipeKartu = "GOLD";        
-//    }
-//    else{
-//        tipeKartu = "SILVER";        
-//    }
+    }
+    else if(saldo >= 300){
+        tipeKartu = "GOLD";        
+    }
+    else{
+        tipeKartu = "SILVER";        
+    }
     
-    singletonApp.getServiceTabungan().createATM(tabungan.getRekening(), tipeKartu);
+    singletonApp.getServiceTabungan().createATM(rekening, tipeKartu);
     response.sendRedirect("adminsitecrud.jsp");
 %>

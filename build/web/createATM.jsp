@@ -1,6 +1,6 @@
 <%-- 
     Document   : createATM
-    Created on : Apr 15, 2018, 11:43:30 PM
+    Created on : Apr 16, 2018, 8:39:07 PM
     Author     : Rachmad
 --%>
 
@@ -12,18 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Silahkan mengisi form di bawah ini untuk membuat atm</h1>
         <form action="createATMLogic.jsp">
-            <table>
-                <tr>
-                    <td>No. Rekening</td>
-                    <td><input type="text" name="rekening"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button type="submit"> submit </button></td>
-                </tr>
-            </table>
-            </form>
+            Rekening : <input type="text" name="rekening">
+            <button type="submit">kirim</button>
+        </form>
     </body>
 </html>

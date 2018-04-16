@@ -17,7 +17,8 @@
         <form>
             <button><a href="adminsitecreatenasabah.jsp">Register Nasabah</a></button>
             <button><a href="adminsitecreatetabungan.jsp">Register Tabungan</a></button>
-            <button><a href="adminsitecreateatm.jsp">Register Kartu ATM</a></button>
+            <!--<button><a href="adminsitecreateatm.jsp">Register Kartu ATM</a></button>-->
+            <button><a href="adminsite.jsp">kembali</a></button>
         </form>
     </body>
 </html>

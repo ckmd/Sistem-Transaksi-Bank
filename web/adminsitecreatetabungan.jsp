@@ -32,8 +32,8 @@
                     <td><input type="text" name="saldo"></td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td><button type="submit"> submit </button></td>
+                    <td><button><a href="adminsitecreate.jsp"> Kembali </a></button></td>
                 </tr>
             </table>
             </form>

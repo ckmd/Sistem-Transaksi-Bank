@@ -32,12 +32,15 @@
                 <td><%out.print(n.getRekening());%></td>
                 <td><%out.print(n.getUser());%></td>
                 <td><%out.print(n.getPass());%></td>
-                <td><%out.println(n.getSaldo());%></td>
-                <td><a href="editTabungan.jsp">edit</a></td>
+                <td><%out.print(n.getSaldo());%></td>
+                <td><a href="editTabungan.jsp" >edit</a></td>
                 <td><a href="deleteTabungan.jsp">delete</a></td>
-                <td><a href="createATM.jsp">create atm</a></td>
+                <td><a href="createATMLogic.jsp">create atm</a></td>  
             </tr>
-            <%}%>
+            <% } %>
+            <tr>
+                <td><button><a href="adminsite.jsp">Kembali</a></button></td>
+            </tr>
         </table>    
     </body>
 </html>

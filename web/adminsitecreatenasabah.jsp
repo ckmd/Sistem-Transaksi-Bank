@@ -17,12 +17,14 @@
         <form action="adminsitecreatenasabahproses.jsp">
             <table>
                 <tr>
-                    <td>ID Nasabah</td>
-                    <td>:</td>
+                    <td>ID Nasabah : </td>
                     <td><input type="text" name="idnasabah"></td>
+                </tr> 
+                <tr>
+                    <td><button type="submit">Buat</button></td>
+                    <td><button><a href="adminsitecreate.jsp"> Kembali </a></button></td>
                 </tr>
-            </table>
-            <button type="submit">Buat</button>
+           </table>
         </form>
     </body>
 </html>
