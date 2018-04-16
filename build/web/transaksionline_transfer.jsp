@@ -1,6 +1,6 @@
 <%-- 
-    Document   : atmform
-    Created on : Apr 14, 2018, 6:31:56 PM
+    Document   : transaksionline_transfer
+    Created on : Apr 15, 2018, 9:51:24 PM
     Author     : USER
 --%>
 
@@ -14,18 +14,16 @@
     <body>
         <h1>Selamat Datang di Bank Krut</h1>
         <br>
-        <form action="atmformproses.jsp">
+        <form action="transaksionline.jsp">
             <table>
                 <tr>
-                    <td>No Rek</td>
-                    <td>:</td>
-                    <td><input type="text" name="norek"></td>
-                    <td>Password</td>
-                    <td>:</td>
-                    <td><input type="text" name="password"></td>
+                    <td>Masukkan Jumlah Uang yang Ingin di Transfer</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="uangtransfer"></td>
                 </tr>
             </table>
-            <button type="submit">Login</button>
+            <button type="submit">Kirim</button>
         </form>
     </body>
 </html>

@@ -39,4 +39,8 @@ public class ServiceTabungan {
     public List<Tabungan> findAll(){
         return daoTabungan.findAll();
     }
+    
+    public Tabungan findByUser(Tabungan tabungan){
+        return daoTabungan.findByUser(tabungan);
+    }
 }
