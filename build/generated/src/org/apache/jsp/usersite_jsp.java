@@ -56,7 +56,7 @@ public final class usersite_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <br>\r\n");
       out.write("        <form>\r\n");
       out.write("            <button><a href=\"onlineform.jsp\">Online</a></button>\r\n");
-      out.write("            <button><a href=\"tellerform.jsp\">Offline</a></button>\r\n");
+      out.write("            <button><a href=\"tellerform.jsp\">Teller</a></button>\r\n");
       out.write("            <button><a href=\"atmform.jsp\">ATM</a></button>\r\n");
       out.write("        </form>\r\n");
       out.write("    </body>\r\n");

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : transaksiofflineatm
-    Created on : Apr 16, 2018, 12:28:30 AM
+    Document   : tellerformproses
+    Created on : Apr 16, 2018, 4:45:09 PM
     Author     : USER
 --%>
 
@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Bank Krut(ATM)</title>
+        <title>Bank Krut(Teller)</title>
     </head>
     <body>
 <%
@@ -20,7 +20,7 @@
     SingletonApp singleton = new SingletonApp();
     Tabungan tabungan = new Tabungan(norek,"user",pass,0);
     if (singleton.getServiceTabungan().login(tabungan) != null){%>
-        <h1>Selamat Datang di ATM</h1>
+        <h1>Selamat Datang di Teller</h1>
         <br>
         <h2>Silahkan Memilih Transaksi</h2>
         <br>

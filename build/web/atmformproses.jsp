@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Bank Krut(Online)</title>
+        <title>Bank Krut(ATM)</title>
     </head>
     <body>
 <%
@@ -20,12 +20,15 @@
     SingletonApp singleton = new SingletonApp();
     Tabungan tabungan = new Tabungan(norek,"user",pass,0);
     if (singleton.getServiceTabungan().login(tabungan) != null){%>
-    
-        <h1>Silahkan Memilih Transaksi</h1>
+        <h1>Selamat Datang di ATM</h1>
+        <br>
+        <h2>Silahkan Memilih Transaksi</h2>
         <br>
         <form>
-            <button><a href="transaksionline_transfer.jsp">Transfer</a></button>
-            <button><a href="transaksionline_ceksaldo.jsp">Cek Saldo</a></button>
+            <button><a href="transaksioffline_transfer.jsp">Transfer</a></button>
+            <button><a href="transaksioffline_ceksaldo.jsp">Cek Saldo</a></button>
+            <button><a href="transaksioffline_tariktunai.jsp">Tarik Tunai</a></button>
+            <button><a href="transaksioffline_setoruang.jsp">Setor Uang</a></button>
         </form>
     
 <%    
