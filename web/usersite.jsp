@@ -16,8 +16,8 @@
         <h3>Silahkan pilih jalur transaksi yang diinginkan</h3>
         <br>
         <form>
-            <button><a href="onlineform.jsp">Online</a></button>
-            <button><a href="tellerform.jsp">Offline</a></button>
+            <button><a href="transaksionline.jsp">Online</a></button>
+            <button><a href="tellerform.jsp">Teller</a></button>
             <button><a href="atmform.jsp">ATM</a></button>
         </form>
     </body>

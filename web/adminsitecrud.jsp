@@ -39,6 +39,7 @@
                 List<Nasabah> listNasabah = singletonApp.getServiceNasabah().findAll();
                 
                 for(Nasabah na : listNasabah){%>
+  
   <div class="tbl-content">
     <table cellpadding="0" cellspacing="0" border="0">
       <tbody>
@@ -50,10 +51,15 @@
           <td>-</td>
         </tr>
           <%}%>
+          <tr>
+                <td><button><a href="#">edit</a></button></td>
+                <td><button><a href="deleteNasabah.jsp">delete</a></button></td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+            </tr>
       </tbody>
     </table>
-          <button><a href="#">edit</a></button>
-          <button><a href="deleteNasabah.jsp">delete</a></button>
   </div>
           
   <h1>List Tabungan</h1>

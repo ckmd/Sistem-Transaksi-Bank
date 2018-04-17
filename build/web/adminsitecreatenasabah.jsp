@@ -17,11 +17,11 @@
 <body>
     <div id="login">
       <form name='form-login' action="adminsitecreatenasabahproses.jsp">
-          <button type="but">Register Nasabah</button><hr><hr>
+          <button type="but">Register Nasabah</button><hr>
           <span class="fontawesome-user"> ID Nasabah</span>
-          <input type="text" name="idnasabah">
+          <input type="text" name="idnasabah" placeholder="ID Nasabah" >
           <span class="fontawesome-user"> NAMA</span>
-          <input type="text" name="usernasabah">
+          <input type="text" name="usernasabah" placeholder="Nama Nasabah">
           <button type="submit">Register</button>
     </form>
     </div>

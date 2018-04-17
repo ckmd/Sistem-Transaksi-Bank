@@ -9,13 +9,17 @@
 <%--<%@page import="service.ServiceNasabah"%>--%>
 <%@page import="singleton.SingletonApp"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Bank Krut</title>
-    </head>
-    <body>
-        <h1>Register Nasabah</h1>
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registrasi</title>
+      <link rel="stylesheet" href="css/style.css">  
+</head>
+  <body>
+    <div id="login">
+      <form name='form-login'>
 <%
     String id = request.getParameter("idnasabah");
     String user = request.getParameter("usernasabah");
@@ -25,14 +29,14 @@
     Nasabah nasabah2 = singletonApp.getServiceNasabah().login(nasabah);
     
     if (nasabah2 == null){
-        singletonApp.getInstance().getServiceNasabah().register(nasabah);
-        out.print("Nasabah telah dibuat");
-    } else {
-        out.print("Nasabah sudah ada");
-    }
-    
-%>
-
-        <button><a href="adminsite.jsp">Kembali</a></button>
-    </body>
+        singletonApp.getInstance().getServiceNasabah().register(nasabah);%>
+        <button type="but">Nasabah Berhasil dibuat</button>
+    <%} else {%>
+        <button type="but">Nasabah Sudah ada</button>
+    <%}%>
+          <hr>
+          <button type="submit"><a href="adminsite.jsp">admin site</a></button>
+    </form>
+  </body>
 </html>
+
