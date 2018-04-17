@@ -6,25 +6,24 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Bank Krut</title>
-    </head>
-    <body>
-        <h1>Register Nasabah</h1>
-        <br>
-        <form action="adminsitecreatenasabahproses.jsp">
-            <table>
-                <tr>
-                    <td>ID Nasabah : </td>
-                    <td><input type="text" name="idnasabah"></td>
-                </tr> 
-                <tr>
-                    <td><button type="submit">Buat</button></td>
-                    <td><button><a href="adminsitecreate.jsp"> Kembali </a></button></td>
-                </tr>
-           </table>
-        </form>
-    </body>
+<html lang="en" >
+<head>
+ `  <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Register Nasabah</title>  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+</head>
+<body>
+    <div id="login">
+      <form name='form-login' action="adminsitecreatenasabahproses.jsp">
+          <button type="but">Register Nasabah</button><hr><hr>
+          <span class="fontawesome-user"> ID Nasabah</span>
+          <input type="text" name="idnasabah">
+          <span class="fontawesome-user"> NAMA</span>
+          <input type="text" name="usernasabah">
+          <button type="submit">Register</button>
+    </form>
+    </div>
+</body>
 </html>

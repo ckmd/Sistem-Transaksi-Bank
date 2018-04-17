@@ -12,10 +12,16 @@ import model.Tabungan;
  */
 public class Nasabah {
     private Long id;
+    private String user;
     private List<Tabungan> listTabungan;
 
     public Nasabah(){
         
+    }
+
+    public Nasabah(Long id, String user) {
+        this.id = id;
+        this.user = user;
     }
     
     public Nasabah(Long id) {
@@ -28,6 +34,14 @@ public class Nasabah {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public List<Tabungan> getListTabungan() {

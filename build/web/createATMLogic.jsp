@@ -3,27 +3,30 @@
     Created on : Apr 15, 2018, 11:46:26 PM
     Author     : Rachmad
 --%>
-<%@page import= "singleton.SingletonApp"%>
-<%@page import = "model.Tabungan" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import= "singleton.SingletonApp"%>
+<%@page import = "model.Tabungan, model.KartuATM" %>
 <!DOCTYPE html>
 <%
-    Long rekening = Long.parseLong(request.getParameter("rekening"));
-    String tipeKartu = "";
-    //Long rekening = (Long) session.getAttribute("rekening");
-    SingletonApp singletonApp = new SingletonApp();
+    String id = request.getParameter("rekening");
+    String tipeKartu = "GOLD";
+    int idKartu = Integer.parseInt(request.getParameter("idkartu"));
     
-    Long saldo = (Long) session.getAttribute("saldo");
-    if(saldo >= 1000){
-        tipeKartu = "PLATINUM";        
+    SingletonApp singletonApp = new SingletonApp();
+    Tabungan tabungan = new Tabungan(Long.parseLong(id));
+    tabungan = singletonApp.getServiceTabungan().login(tabungan);
+    
+    if(tabungan.getSaldo() >= KartuATM.PLATINUM.getLongValue()){
+        tipeKartu = KartuATM.PLATINUM.getStringValue();        
     }
-    else if(saldo >= 300){
-        tipeKartu = "GOLD";        
+    else if(tabungan.getSaldo() >= KartuATM.GOLD.getLongValue()){
+        tipeKartu = KartuATM.GOLD.getStringValue();        
     }
     else{
-        tipeKartu = "SILVER";        
+        tipeKartu = KartuATM.SILVER.getStringValue();        
     }
     
-    singletonApp.getServiceTabungan().createATM(rekening, tipeKartu);
+    singletonApp.getServiceTabungan().createATM(tabungan.getRekening(), tipeKartu, idKartu);
     response.sendRedirect("adminsitecrud.jsp");
 %>

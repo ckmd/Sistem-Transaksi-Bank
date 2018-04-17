@@ -67,9 +67,10 @@ public class DaoNasabah implements DaoApp<Nasabah, Long>{
             }
             stmt = conn.createStatement();
             String sql = "INSERT INTO "+tbl_nasabah
-                    +" (id)"
+                    +" (id,user)"
                     +"VALUES ("
-                    +nasabah.getId()+")";
+                    +nasabah.getId()+", "
+                    +"'"+nasabah.getUser()+"')";
             stmt.executeUpdate(sql);
         }
         catch(SQLException ex){
@@ -87,13 +88,42 @@ public class DaoNasabah implements DaoApp<Nasabah, Long>{
                 return;                
             }
             stmt = conn.createStatement();
-            String sql = "DELETE FROM "+tbl_nasabah+"WHERE id ="+id;
+            String sql = "DELETE FROM "+tbl_nasabah+" WHERE id="+id;
             stmt.executeUpdate(sql);
         }
         catch(SQLException ex){
             Logger.getLogger(DaoNasabah.class.getName()).log(Level.SEVERE,null,ex);
         }
         closeConnection();
+    }
+    
+    public List<Nasabah> findAll(){
+        Nasabah nasabah = null;
+        List<Nasabah> listNasabah = new ArrayList<Nasabah>();
+        openConnection();
+        try{
+            if(conn == null){
+                System.out.println("Conn is null");
+                return null;                
+            }
+            stmt = conn.createStatement();
+            String sql = "SELECT * FROM "+tbl_nasabah;
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.first();
+                while(!rs.isAfterLast()){
+                    long nid = rs.getLong("id");
+                    String user = rs.getString("user");
+                    nasabah = new Nasabah(nid,user);
+                    listNasabah.add(nasabah);
+                    rs.next();
+                }
+            rs.close();
+        }
+        catch(SQLException ex){
+            Logger.getLogger(DaoTabungan.class.getName()).log(Level.SEVERE,null,ex);
+        }
+        closeConnection();
+        return listNasabah;
     }
     
     @Override

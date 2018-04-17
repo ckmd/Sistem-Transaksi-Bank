@@ -18,8 +18,9 @@
         <h1>Register Nasabah</h1>
 <%
     String id = request.getParameter("idnasabah");
+    String user = request.getParameter("usernasabah");
     Long idnasabah = Long.parseLong(id);
-    Nasabah nasabah = new Nasabah(idnasabah);
+    Nasabah nasabah = new Nasabah(idnasabah,user);
     SingletonApp singletonApp = new SingletonApp();
     Nasabah nasabah2 = singletonApp.getServiceNasabah().login(nasabah);
     
@@ -32,6 +33,6 @@
     
 %>
 
-        <button><a href="adminsitecreate.jsp">Kembali</a></button>
+        <button><a href="adminsite.jsp">Kembali</a></button>
     </body>
 </html>

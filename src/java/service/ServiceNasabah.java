@@ -6,6 +6,7 @@
 package service;
 import model.Nasabah;
 import dao_impl.DaoNasabah;
+import java.util.List;
 /**
  *
  * @author USER
@@ -25,5 +26,8 @@ public class ServiceNasabah {
     }
     public void delete(Nasabah nasabah){
         daoNasabah.delete(nasabah.getId());
+    }
+    public List<Nasabah> findAll(){
+        return daoNasabah.findAll();
     }
 }
