@@ -10,22 +10,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bank Krut(Online)</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
-        <h1>Selamat Datang di Bank Krut</h1>
+        <h1>Selamat Datang di ATM Bank Krut</h1>
         <br>
-        <form action="atmformproses.jsp">
+        <div id="login">
+        <form name='form-login' action="atmformproses.jsp">
             <table>
                 <tr>
-                    <td>ID Kartu</td>
-                    <td>:</td>
-                    <td><input type="text" name="idkartu"></td>
-                    <td>Password</td>
-                    <td>:</td>
-                    <td><input type="text" name="password"></td>
+                    <td><input type="text" name="idkartu" placeholder="ID Kartu" ></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="password" placeholder="Password" ></td>
                 </tr>
             </table>
             <button type="submit">Login</button>
         </form>
+        </div>
     </body>
 </html>

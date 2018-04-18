@@ -20,19 +20,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bank Krut(Offline)</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
         <h1>Transaksi Berhasil</h1>
         <br>
-        <h2>Saldo anda sekarang</h2>
-        <br>
+        <h1>Saldo anda sekarang
         <%
             out.print(transaksi.cekSaldo());
         %>
+        </h1>
         <br>
+        <div id="login">
         <form>
-            <button><a href="tellermenu.jsp">Kembali ke menu utama</a></button>
-            <button><a href="usersite.jsp">Keluar</a></button>
+            <button type="submit"><a href="tellermenu.jsp">Kembali ke menu utama</a></button>
+            <hr><button type="submit"><a href="usersite.jsp">Keluar</a></button>
         </form>
+        </div>
     </body>
 </html>

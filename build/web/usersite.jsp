@@ -10,15 +10,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bank Krut</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
         <h1>Selamat Datang di Bank Krut</h1>
-        <h3>Silahkan pilih jalur transaksi yang diinginkan</h3>
+        <h1>Silahkan pilih jalur transaksi yang diinginkan</h1>
         <br>
-        <form>
-            <button><a href="transaksionline.jsp">Online</a></button>
-            <button><a href="tellerform.jsp">Teller</a></button>
-            <button><a href="atmform.jsp">ATM</a></button>
+        <div id="login">
+        <form name='form-login'>
+            <button type="but"><a href="transaksionline.jsp">Online</a></button>
+            <hr><button type="but"><a href="tellerform.jsp">Teller</a></button>
+            <hr><button type="but"><a href="atmform.jsp">ATM</a></button>
         </form>
+        </div>
     </body>
 </html>

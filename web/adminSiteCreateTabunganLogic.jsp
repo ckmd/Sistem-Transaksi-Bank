@@ -23,27 +23,32 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registrasi Tabungan</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="cssTable/style.css">  
+
     </head>
     <body>
-        <h3>Registrasi sukses</h3>
-        <table>
-            <tr>
-                <td>Rekening</td>
-                <td><% out.print(tabungan.getRekening()); %></td>
-            </tr>
-            <tr>
-                <td>User</td>
-                <td><% out.print(tabungan.getUser()); %></td>
-            </tr>
-            <tr>
-                <td>Pass</td>
-                <td><% out.print(tabungan.getPass()); %></td>
-            </tr>
-            <tr>
-                <td>Saldo</td>
-                <td><% out.print(tabungan.getSaldo()); %></td>
-            </tr>
-        </table>
-        <button> <a href="adminsite.jsp">back to admin site</a></button>
+        <h1>Registrasi sukses</h1>
+        <div id="login">
+            <form name='form-login' action="adminSiteCreateTabunganLogic.jsp">
+            <table>
+                <tr>
+                    <td><input type="text" name="rekening" placeholder=<% out.print(tabungan.getRekening()); %>></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="user" placeholder=<% out.print(tabungan.getUser()); %>></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="pass" placeholder=<% out.print(tabungan.getPass()); %>></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="saldo" placeholder=<% out.print(tabungan.getSaldo()); %>></td>
+                </tr>
+                <tr>
+                    <td><button type="submit"><a href="adminsite.jsp">back to admin site</a></button></td>
+                </tr>
+            </table>
+            </form>
+        </div>
     </body>
 </html>

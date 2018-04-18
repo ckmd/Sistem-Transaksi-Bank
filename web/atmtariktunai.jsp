@@ -10,18 +10,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bank Krut(Offline)</title>
+       <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
-        <form action="atmtariktunaiatmproses.jsp">
+        <h1>Masukkan Jumlah Uang yang Ingin diambil</h1>
+        <div id="login">
+        <form name='form-login' action="atmtariktunaiatmproses.jsp">
             <table>
                 <tr>
-                    <td>Masukkan Jumlah Uang yang Ingin di Ambil</td>
-                </tr>
-                <tr>
-                    <td><input type="text" name="uangambil"></td>
+                    <td><input type="text" name="uangambil" placeholder="nominal"></td>
                 </tr>
             </table>
-            <button type="submit">Simpan</button>
+            <button type="submit">Tarik</button>
         </form>
+        </div>
     </body>
 </html>

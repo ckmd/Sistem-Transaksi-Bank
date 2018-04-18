@@ -10,24 +10,26 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="cssTable/style.css">  
+
     </head>
     <body>
         <h1>Silahkan mengisi form di bawah ini untuk membuat atm</h1>
-        <form action="createATMLogic.jsp">
+        <div id="login">
+        <form name='form-login' action="createATMLogic.jsp">
             <table>
                 <tr>
-                    <td>No. Rekening</td>
-                    <td><input type="text" name="rekening"></td>
+                    <td><input type="text" name="rekening" placeholder="NO REKENING"></td>
                 </tr>
                 <tr>
-                    <td>ID Kartu</td>
-                    <td><input type="text" name="idkartu"></td>
+                    <td><input type="text" name="idkartu" placeholder="ID KARTU"></td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td><button type="submit"> submit </button></td>
                 </tr>
             </table>
             </form>
+        </div>
     </body>
 </html>

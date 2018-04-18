@@ -10,22 +10,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bank Krut(Teller)</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
-        <h1>Selamat Datang di Bank Krut</h1>
+        <h1>Selamat Datang di Teller</h1>
         <br>
-        <form action="tellerformproses.jsp">
+        <div id="login">
+        <form name='form-login' action="tellerformproses.jsp">
             <table>
                 <tr>
-                    <td>No. Rekening</td>
-                    <td>:</td>
-                    <td><input type="text" name="norek"></td>
-                    <td>Password</td>
-                    <td>:</td>
-                    <td><input type="text" name="password"></td>
+                    <td><input type="text" name="norek" placeholder="NO Rekening" ></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="password" placeholder="Password" ></td>
                 </tr>
             </table>
             <button type="submit">Login</button>
         </form>
+        </div>
     </body>
 </html>

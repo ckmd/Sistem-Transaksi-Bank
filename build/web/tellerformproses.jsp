@@ -12,6 +12,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bank Krut(Teller)</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
 <%
@@ -28,11 +30,13 @@
 %>
         <h1>User Tidak Ada atau Password Salah</h1>
         <br>
-        <h5>Silahkan mengulang kembali</h5>
+        <h1>Silahkan mengulang kembali</h1>
         <br>
+        <div id="login">
         <form>
-            <button><a href="tellerform.jsp">Kembali</a></button>
+            <button type="submit"><a href="tellerform.jsp">Kembali</a></button>
         </form>
+        </div>
 <%    
     }
 %>

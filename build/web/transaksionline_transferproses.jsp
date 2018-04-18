@@ -12,6 +12,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bank Krut(Online)</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
 <%
@@ -24,33 +26,31 @@
 %>
         <h1>Transaksi Berhasil</h1>
         <br>
-        <h2>Saldo anda sekarang</h2>
-        <br>
+        <h1>Saldo anda sekarang
         <%
             out.print(transaksi.cekSaldo());
         %>
-        <br>
-        <form>
-            <button><a href="tellermenu.jsp">Kembali ke menu utama</a></button>
-            <button><a href="usersite.jsp">Keluar</a></button>
-        </form>
+        
 <%    
     } else{   
 %>
         <h1>Transaksi Gagal</h1>
         <br>
-        <h2>Saldo anda sekarang</h2>
-        <br>
+        <h1> saldo anda sekarang 
         <%
             out.print(transaksi.cekSaldo());
         %>
-        <br>
-        <form>
-            <button><a href="transaksionlinemenu.jsp">Kembali ke menu utama</a></button>
-            <button><a href="usersite.jsp">Keluar</a></button>
-        </form>
+
 <%    
     }   
 %>        
+        </h1>
+        <br>
+        <div id="login">
+        <form name='form-login'>
+            <button type="submit"><a href="transaksionlinemenu.jsp">Kembali ke menu utama</a></button>
+            <hr><button type="submit"><a href="usersite.jsp">Keluar</a></button>
+        </form>
+        </div>
     </body>
 </html>
