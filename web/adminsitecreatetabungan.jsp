@@ -33,6 +33,9 @@
                     <td><input type="text" name="saldo" placeholder="SALDO"></td>
                 </tr>
                 <tr>
+                    <td><input type="text" name="idnasabah" placeholder="ID NASABAH"></td>
+                </tr>
+                <tr>
                     <td><button type="submit"> submit </button></td>
                 </tr>
             </table>

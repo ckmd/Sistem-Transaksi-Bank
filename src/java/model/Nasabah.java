@@ -13,7 +13,6 @@ import model.Tabungan;
 public class Nasabah {
     private Long id;
     private String user;
-    private List<Tabungan> listTabungan;
 
     public Nasabah(){
         
@@ -42,13 +41,5 @@ public class Nasabah {
 
     public void setUser(String user) {
         this.user = user;
-    }
-
-    public List<Tabungan> getListTabungan() {
-        return listTabungan;
-    }
-
-    public void setListTabungan(List<Tabungan> listTabungan) {
-        this.listTabungan = listTabungan;
     }
 }

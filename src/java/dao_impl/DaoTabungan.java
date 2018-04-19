@@ -68,12 +68,13 @@ public class DaoTabungan implements DaoApp<Tabungan, Long>{
             }
             stmt = conn.createStatement();
             String sql = "INSERT INTO "+tbl_tabungan
-                    +" (rekening,user,pass,saldo)"
+                    +" (rekening,user,pass,saldo,id_nasabah)"
                     +"VALUES ("
                     +""+tabungan.getRekening()+", "
                     +"'"+tabungan.getUser()+"'"
                     +", "+tabungan.getPass()+", "
-                    +tabungan.getSaldo()+")";
+                    +tabungan.getSaldo()+", "
+                    +tabungan.getIdNasabah()+")";
             stmt.executeUpdate(sql);
         }
         catch(SQLException ex){
@@ -132,14 +133,16 @@ public class DaoTabungan implements DaoApp<Tabungan, Long>{
             String sql = "SELECT * FROM "+ tbl_tabungan +" WHERE user='"+tabungan.getUser()+"'";
             ResultSet rs = stmt.executeQuery(sql);
             if(rs.first()){
-                long rekening = rs.getLong("rekening");
+                Long nid= rs.getLong("rekening");
                 String user = rs.getString("user");
                 Integer pass = rs.getInt("pass");
-                long saldo = rs.getLong("saldo");
+                Long saldo = rs.getLong("saldo");
                 String tipe = rs.getString("atm");
                 int idKartu = rs.getInt("id_kartu");
+                Long idNasabah = rs.getLong("id_nasabah");
                 if(pass.equals(tabungan.getPass())){
-                    new_tabungan = new Tabungan(rekening,user,pass,saldo,tipe,idKartu);
+                    tabungan = new Tabungan(
+                            nid, user, pass, saldo, tipe, idKartu, idNasabah);
                 }
                 rs.close();
             }
@@ -170,7 +173,9 @@ public class DaoTabungan implements DaoApp<Tabungan, Long>{
                 long saldo = rs.getLong("saldo");
                 String tipe = rs.getString("atm");
                 int idKartu = rs.getInt("id_kartu");
-                tabungan = new Tabungan(nid,user,pass,saldo,tipe,idKartu);
+                Long idNasabah = rs.getLong("id_nasabah");
+                tabungan = new Tabungan(
+                        nid, user, pass, saldo, tipe, idKartu, idNasabah);
                 rs.close();
             }
         }
@@ -193,13 +198,15 @@ public class DaoTabungan implements DaoApp<Tabungan, Long>{
             String sql = "SELECT * FROM "+tbl_tabungan+" WHERE id_kartu=" + id;
             ResultSet rs = stmt.executeQuery(sql);
             if(rs.first()){
-                long nid = rs.getLong("rekening");
+                Long nid = rs.getLong("rekening");
                 String user = rs.getString("user");
                 Integer pass = rs.getInt("pass");
-                long saldo = rs.getLong("saldo");
+                Long saldo = rs.getLong("saldo");
                 String tipe = rs.getString("atm");
                 int idKartu = rs.getInt("id_kartu");
-                tabungan = new Tabungan(nid,user,pass,saldo,tipe,idKartu);
+                Long idNasabah = rs.getLong("id_nasabah");
+                tabungan = new Tabungan(
+                        nid, user, pass, saldo, tipe, idKartu, idNasabah);
                 rs.close();
             }
         }
@@ -224,13 +231,15 @@ public class DaoTabungan implements DaoApp<Tabungan, Long>{
             ResultSet rs = stmt.executeQuery(sql);
             rs.first();
                 while(!rs.isAfterLast()){
-                    long nid = rs.getLong("rekening");
+                    Long nid = rs.getLong("rekening");
                     String user = rs.getString("user");
                     Integer pass = rs.getInt("pass");
-                    long saldo = rs.getLong("saldo");
+                    Long saldo = rs.getLong("saldo");
                     String tipe = rs.getString("atm");
                     int idKartu = rs.getInt("id_kartu");
-                    tabungan = new Tabungan(nid,user,pass,saldo,tipe,idKartu);
+                    Long idNasabah = rs.getLong("id_nasabah");
+                    tabungan = new Tabungan(
+                            nid, user, pass, saldo, tipe, idKartu, idNasabah);
                     listTabungan.add(tabungan);
                     rs.next();
                 }
@@ -313,6 +322,7 @@ public class DaoTabungan implements DaoApp<Tabungan, Long>{
                     +" saldo BIGINT, "
                     +" atm VARCHAR(255), "
                     +" id_kartu BIGINT, "
+                    +" id_nasabah BIGINT, "
                     +" PRIMARY KEY ( rekening ))";
             stmt.executeUpdate(sql);
         }

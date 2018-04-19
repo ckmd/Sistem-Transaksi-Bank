@@ -54,7 +54,7 @@
           <tr>
                 <td><button><a href="#">edit</a></button></td>
                 <td><button><a href="deleteNasabah.jsp">delete</a></button></td>
-          <td>-</td>
+          <td><button><a href="listTabungan.jsp">List Tabungan</a></button></td>
           <td>-</td>
           <td>-</td>
             </tr>

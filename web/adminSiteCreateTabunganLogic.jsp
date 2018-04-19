@@ -13,9 +13,10 @@
     String user = request.getParameter("user");
     String pass = request.getParameter("pass");
     String saldo = request.getParameter("saldo");
+    String idNasabah = request.getParameter("idnasabah");
     
     SingletonApp singletonApp = new SingletonApp();
-    Tabungan tabungan = new Tabungan(Long.parseLong(id),user,Integer.parseInt(pass),Long.parseLong(saldo));
+    Tabungan tabungan = new Tabungan(Long.parseLong(id),user,Integer.parseInt(pass),Long.parseLong(saldo),Long.parseLong(idNasabah));
     
     singletonApp.getServiceTabungan().register(tabungan);
 %>

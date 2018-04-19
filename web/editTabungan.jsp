@@ -10,32 +10,28 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
         <h1>Silahkan mengisi form di bawah ini untuk mengedit tabungan</h1>
+        <div id="login">
         <form action="editTabunganLogic.jsp">
             <table>
                 <tr>
-                    <td>No. Rekening</td>
-                    <td><input type="text" name="rekening"></td>
+                    <td><input type="text" name="rekening" placeholder="NO REKENING"></td>
                 </tr>
                 <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="user"></td>
+                    <td><input type="text" name="user" placeholder="USERNAME"></td>
                 </tr>
                 <tr>
-                    <td>Password</td>
-                    <td><input type="text" name="pass"></td>
+                    <td><input type="text" name="pass" placeholder="PASSWORD"></td>
                 </tr>
                 <tr>
-                    <td>Saldo</td>
-                    <td><input type="text" name="saldo"></td>
-                </tr>
-                <tr>
-                    <td></td>
                     <td><button type="submit"> submit </button></td>
                 </tr>
             </table>
             </form>
+        </div>
     </body>
 </html>

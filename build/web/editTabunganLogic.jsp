@@ -11,10 +11,9 @@
     String id = request.getParameter("rekening");
     String user = request.getParameter("user");
     String pass = request.getParameter("pass");
-    String saldo = request.getParameter("saldo");
     
     SingletonApp singletonApp = new SingletonApp();
-    Tabungan tabungan = new Tabungan(Long.parseLong(id),user,Integer.parseInt(pass),Long.parseLong(saldo));
+    Tabungan tabungan = new Tabungan(Long.parseLong(id),user,Integer.parseInt(pass));
     
     singletonApp.getServiceTabungan().update(Long.parseLong(id), tabungan, user, Integer.parseInt(pass));
 %>
@@ -22,9 +21,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Edit Tabungan</title>
+        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="cssTable/style.css">
     </head>
     <body>
-        <h3>Edit sukses</h3>
+        <h1>Edit sukses</h1>
+        <div id="login">
+            <form>
         <table>
             <tr>
                 <td>Rekening</td>
@@ -39,10 +42,12 @@
                 <td><% out.print(tabungan.getPass()); %></td>
             </tr>
             <tr>
-                <td>Saldo</td>
-                <td><% out.print(tabungan.getSaldo()); %></td>
+                <td>
+                            <button type="but"> <a href="adminsite.jsp">back to admin site</a></button>
+                </td>
             </tr>
         </table>
-        <button> <a href="adminsite.jsp">back to admin site</a></button>
+            </form>
+        </div>
     </body>
 </html>

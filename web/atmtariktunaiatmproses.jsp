@@ -20,9 +20,6 @@
     Long uangambil = Long.parseLong(request.getParameter("uangambil"));
     Tabungan tabungan = (Tabungan) session.getAttribute("tabungan");
     Atm transaksi = new Atm(tabungan);
-    String atm;
-    
-    String teller;
     
     
     if (transaksi.ambil(uangambil) == true){

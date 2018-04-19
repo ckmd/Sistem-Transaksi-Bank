@@ -16,6 +16,7 @@ public class Tabungan {
     private int pass;
     private int idKartu;
     private String tipekartu;
+    private Long idNasabah;
     
     public Tabungan(){
         
@@ -26,21 +27,30 @@ public class Tabungan {
         this.pass = pass;
         this.saldo = saldo;
     }
+
+    public Tabungan(Long rekening,String user, int pass) {
+        this.rekening = rekening;
+        this.user = user;
+        this.pass = pass;
+    }
     
-    public Tabungan(Long rekening, String user, int pass, Long saldo){
+    
+    public Tabungan(Long rekening, String user, int pass, Long saldo, Long idNasabah){
         this.rekening = rekening;
         this.user = user;
         this.pass = pass;
         this.saldo = saldo;
+        this.idNasabah = idNasabah;
     }
     
-    public Tabungan(Long rekening, String user, int pass, Long saldo, String tipe, int idKartu){
+    public Tabungan(Long rekening, String user, int pass, Long saldo, String tipe, int idKartu, Long idNasabah){
         this.rekening = rekening;
         this.user = user;
         this.pass = pass;
         this.saldo = saldo;
         this.tipekartu = tipe;
         this.idKartu = idKartu;
+        this.idNasabah = idNasabah;
     }
 
     public Tabungan(Long rekening) {
@@ -95,4 +105,13 @@ public class Tabungan {
     public void setIdKartu(int idKartu) {
         this.idKartu = idKartu;
     }
+
+    public Long getIdNasabah() {
+        return idNasabah;
+    }
+
+    public void setIdNasabah(Long idNasabah) {
+        this.idNasabah = idNasabah;
+    }
+    
 }
